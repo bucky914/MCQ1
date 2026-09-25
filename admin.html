@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ADMIN LOGIN -->
+
+    <section id="adminLogin" class="card">
+
+        <h1>Admin Login</h1>
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            id="adminEmail"
+            placeholder="Admin email"
+        >
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+        >
+
+        <button onclick="adminLogin()">
+            Login
+        </button>
+
+        <p id="adminError" class="error"></p>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="hidden">
+
+        <div class="exam-header">
+
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Examination Results</p>
+            </div>
+
+            <button onclick="adminLogout()">
+                Logout
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Statistics</h2>
+
+            <div class="result-box">
+
+                <div>
+
+                    <span>Total Students</span>
+
+                    <strong id="totalStudents">
+                        0
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>Average Score</span>
+
+                    <strong id="averageScore">
+                        0
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>Average Percentage</span>
+
+                    <strong id="averagePercentage">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <br>
+
+
+        <div class="card">
+
+            <h2>Student Results</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search name or register number..."
+                oninput="filterResults()"
+            >
+
+            <br><br>
+
+            <div style="overflow-x:auto">
+
+                <table
+                    id="resultsTable"
+                    border="1"
+                    cellpadding="12"
+                    cellspacing="0"
+                    width="100%"
+                >
+
+                    <thead>
+
+                        <tr>
+
+                            <th>#</th>
+
+                            <th>Username</th>
+
+                            <th>Register Number</th>
+
+                            <th>Score</th>
+
+                            <th>Percentage</th>
+
+                            <th>Submitted</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="resultsBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

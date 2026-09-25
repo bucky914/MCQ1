@@ -1,0 +1,5 @@
+[functions.start-mcq]
+verify_jwt = false
+
+[functions.finish-mcq]
+verify_jwt = false
