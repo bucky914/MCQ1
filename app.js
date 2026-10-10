@@ -96,670 +96,674 @@ async function callMcqFunction(name, body) {
 // Correct answers are stored privately in Supabase; they are not shipped to the browser.
 // ------------------------------------------------------
 
+
 const questions = [
+
+    // UNIT IV - DIRECTING
 
     // 1
     {
-        question: "Who is known as the Father of Scientific Management?",
+        question: "Foundations of individual and group behaviour are concerned with:",
         options: [
-            "Henry Fayol",
-            "F.W. Taylor",
-            "Elton Mayo",
-            "Peter Drucker"
+            "Only product design",
+            "How people behave individually and in groups at work",
+            "Only inventory storage",
+            "Only financial accounting"
         ]
     },
 
     // 2
     {
-        question: "Who is known as the Father of Administrative Management?",
+        question: "Which factor can influence individual behaviour at work?",
         options: [
-            "F.W. Taylor",
-            "Henry Fayol",
-            "Elton Mayo",
-            "Max Weber"
+            "Company logo only",
+            "Office address only",
+            "Personality and attitudes",
+            "Product colour only"
         ]
     },
 
     // 3
     {
-        question: "How many principles of management were given by Henry Fayol?",
+        question: "Group behaviour refers to:",
         options: [
-            "10",
-            "12",
-            "14",
-            "16"
+            "One person's technical skill only",
+            "The company's annual budget",
+            "How people act and interact as members of a group",
+            "The physical layout of a building"
         ]
     },
 
     // 4
     {
-        question: "Which principle of Fayol states that an employee should receive orders from only one superior?",
+        question: "Motivation is the process of:",
         options: [
-            "Unity of Direction",
-            "Unity of Command",
-            "Discipline",
-            "Equity"
+            "Encouraging people to work toward desired goals",
+            "Preparing financial statements",
+            "Reducing all communication",
+            "Assigning job titles only"
         ]
     },
 
     // 5
     {
-        question: "Which Fayol principle states that similar activities should have one plan and one head?",
+        question: "Which theory arranges human needs in levels?",
         options: [
-            "Unity of Command",
-            "Unity of Direction",
-            "Centralization",
-            "Scalar Chain"
+            "Maslow's Need Hierarchy Theory",
+            "Scalar Chain Theory",
+            "Trait Theory",
+            "Bureaucratic Theory"
         ]
     },
 
     // 6
     {
-        question: "Which principle refers to specialization of work?",
+        question: "According to Maslow, the most basic needs are:",
         options: [
-            "Division of Work",
-            "Authority",
-            "Equity",
-            "Order"
+            "Physiological needs",
+            "Social needs",
+            "Esteem needs",
+            "Self-actualization needs"
         ]
     },
 
     // 7
     {
-        question: "Which management principle emphasizes obedience and respect for rules?",
+        question: "Job security is an example of a:",
         options: [
-            "Discipline",
-            "Equity",
-            "Initiative",
-            "Order"
+            "Self-actualization need",
+            "Social need",
+            "Esteem need",
+            "Safety need"
         ]
     },
 
     // 8
     {
-        question: "Which principle emphasizes fair and equal treatment of employees?",
+        question: "Friendship and belonging are examples of:",
         options: [
-            "Equity",
-            "Discipline",
-            "Order",
-            "Centralization"
+            "Safety needs",
+            "Physiological needs",
+            "Social needs",
+            "Esteem needs"
         ]
     },
 
     // 9
     {
-        question: "Which principle states that organizational interest should come before individual interest?",
+        question: "Recognition and respect are examples of:",
         options: [
-            "Unity of Command",
-            "Subordination of Individual Interest to General Interest",
-            "Equity",
-            "Order"
+            "Safety needs",
+            "Physiological needs",
+            "Esteem needs",
+            "Social needs"
         ]
     },
 
     // 10
     {
-        question: "Which principle deals with fair payment to employees?",
+        question: "Self-actualization refers to:",
         options: [
-            "Remuneration",
-            "Equity",
-            "Discipline",
-            "Stability"
+            "Realizing one's potential",
+            "Receiving food only",
+            "Making friends only",
+            "Having job security only"
         ]
     },
 
     // 11
     {
-        question: "The scalar chain refers to:",
+        question: "Herzberg's Two-Factor Theory identifies:",
         options: [
-            "Flow of materials",
-            "Line of authority from top to bottom",
-            "Employee motivation",
-            "Division of labour"
+            "Formal and informal reports",
+            "Hygiene factors and motivators",
+            "Leaders and followers",
+            "Costs and revenues"
         ]
     },
 
     // 12
     {
-        question: "Esprit de Corps means:",
+        question: "Which is a hygiene factor in Herzberg's theory?",
         options: [
-            "Team spirit",
-            "Individual responsibility",
-            "Authority",
-            "Centralization"
+            "Recognition",
+            "Working conditions",
+            "Achievement",
+            "Responsibility"
         ]
     },
 
     // 13
     {
-        question: "Which principle encourages employees to show creativity and take initiative?",
+        question: "Which is a motivator in Herzberg's theory?",
         options: [
-            "Initiative",
-            "Discipline",
-            "Order",
-            "Centralization"
+            "Achievement",
+            "Job security",
+            "Working conditions",
+            "Company policy"
         ]
     },
 
     // 14
     {
-        question: "Which management function involves deciding in advance what is to be done?",
+        question: "McGregor's Theory X assumes that employees generally:",
         options: [
-            "Organizing",
-            "Planning",
-            "Staffing",
-            "Controlling"
+            "May dislike work and need close supervision",
+            "Always need no supervision",
+            "Never respond to rewards",
+            "Prefer no organizational goals"
         ]
     },
 
     // 15
     {
-        question: "Which management function involves arranging resources and activities?",
+        question: "McGregor's Theory Y suggests that employees can:",
         options: [
-            "Planning",
-            "Organizing",
-            "Directing",
-            "Controlling"
+            "Work only under punishment",
+            "Avoid every responsibility",
+            "Never enjoy their work",
+            "Exercise self-direction and accept responsibility"
         ]
     },
 
     // 16
     {
-        question: "Recruitment, selection and training are mainly related to:",
+        question: "Which is a financial motivational technique?",
         options: [
-            "Planning",
-            "Staffing",
-            "Controlling",
-            "Directing"
+            "Recognition",
+            "Employee participation",
+            "Job rotation",
+            "Performance bonus"
         ]
     },
 
     // 17
     {
-        question: "Which function involves guiding, motivating and leading employees?",
+        question: "Which is a non-financial motivational technique?",
         options: [
-            "Planning",
-            "Organizing",
-            "Directing",
-            "Controlling"
+            "Commission",
+            "Recognition and praise",
+            "Cash bonus",
+            "Piece-rate wages"
         ]
     },
 
     // 18
     {
-        question: "Which function compares actual performance with planned performance?",
+        question: "Job satisfaction means:",
         options: [
-            "Planning",
-            "Organizing",
-            "Directing",
-            "Controlling"
+            "The manager's formal title",
+            "The number of machines in a factory",
+            "The firm's tax rate",
+            "An employee's feelings about their job"
         ]
     },
 
     // 19
     {
-        question: "Management is best described as:",
+        question: "Job enrichment involves:",
         options: [
-            "Making profits only",
-            "Getting work done through and with people",
-            "Supervising workers only",
-            "Controlling finances only"
+            "Reducing employee involvement",
+            "Removing all responsibility",
+            "Adding meaningful tasks and greater responsibility",
+            "Repeating the same simple task only"
         ]
     },
 
     // 20
     {
-        question: "Which of the following is NOT a basic function of management?",
+        question: "Job rotation means:",
         options: [
-            "Planning",
-            "Organizing",
-            "Directing",
-            "Manufacturing"
+            "Removing all training",
+            "Moving employees between different jobs",
+            "Promoting every employee",
+            "Automatically increasing wages"
         ]
     },
 
     // 21
     {
-        question: "Which level of management is mainly responsible for policy formulation?",
+        question: "Leadership is the process of:",
         options: [
-            "Lower-level management",
-            "Middle-level management",
-            "Top-level management",
-            "Supervisory management"
+            "Preparing budgets only",
+            "Checking stock only",
+            "Recording invoices only",
+            "Influencing people toward common goals"
         ]
     },
 
     // 22
     {
-        question: "Middle-level managers mainly:",
+        question: "An autocratic leader typically:",
         options: [
-            "Formulate all policies",
-            "Implement policies and coordinate departments",
-            "Perform only clerical work",
-            "Operate machinery"
+            "Avoids all decisions",
+            "Always lets the group decide",
+            "Gives complete freedom in every situation",
+            "Makes decisions with little subordinate participation"
         ]
     },
 
     // 23
     {
-        question: "Lower-level management is also known as:",
+        question: "Democratic leadership encourages:",
         options: [
-            "Top management",
-            "Middle management",
-            "Supervisory management",
-            "Strategic management"
+            "One-way orders only",
+            "No feedback",
+            "Complete leader isolation",
+            "Employee participation in decisions"
         ]
     },
 
     // 24
     {
-        question: "Which skill is especially important for top-level managers?",
+        question: "Laissez-faire leadership gives subordinates:",
         options: [
-            "Technical skill",
-            "Conceptual skill",
-            "Mechanical skill",
-            "Clerical skill"
+            "Only strict instructions",
+            "No responsibility at all",
+            "Considerable freedom in decision-making",
+            "No information"
         ]
     },
 
     // 25
     {
-        question: "Which skill is particularly important for lower-level managers?",
+        question: "Trait theories of leadership focus on:",
         options: [
-            "Technical skill",
-            "Conceptual skill",
-            "Political skill",
-            "Financial skill"
+            "Communication channels only",
+            "Budget preparation",
+            "Product packaging",
+            "Personal qualities of leaders"
         ]
     },
 
     // 26
     {
-        question: "Human relations skill refers to the ability to:",
+        question: "Behavioural theories of leadership study:",
         options: [
-            "Operate machines",
-            "Work effectively with people",
-            "Prepare accounts",
-            "Design products"
+            "Only office equipment",
+            "Leaders' actions and behaviour",
+            "Only leaders' family backgrounds",
+            "Only salary structures"
         ]
     },
 
     // 27
     {
-        question: "Scientific Management was developed mainly to improve:",
+        question: "Contingency theories state that leadership effectiveness depends on:",
         options: [
-            "Employee welfare only",
-            "Efficiency and productivity",
-            "Government policy",
-            "Marketing activities"
+            "One style being best in all cases",
+            "The office location",
+            "The situation and its requirements",
+            "The leader's age only"
         ]
     },
 
     // 28
     {
-        question: "Which technique of Taylor determines the time required to complete a task?",
+        question: "Communication is best defined as:",
         options: [
-            "Motion Study",
-            "Time Study",
-            "Fatigue Study",
-            "Method Study"
+            "Writing reports only",
+            "The exchange of information and understanding",
+            "Speaking without listening",
+            "Sending a message without a receiver"
         ]
     },
 
     // 29
     {
-        question: "Motion Study is mainly concerned with:",
+        question: "Which sequence best describes the communication process?",
         options: [
-            "Determining salaries",
-            "Eliminating unnecessary movements",
-            "Recruiting employees",
-            "Preparing budgets"
+            "Planning, staffing, production, sales",
+            "Sender, encoding, message, channel, receiver, decoding, feedback",
+            "Budget, profit, audit, report",
+            "Leader, salary, output, promotion"
         ]
     },
 
     // 30
     {
-        question: "Fatigue Study helps determine:",
+        question: "Which is a common barrier to effective communication?",
         options: [
-            "Salary structure",
-            "Suitable rest intervals",
-            "Marketing strategy",
-            "Production cost"
+            "Clear feedback",
+            "Simple wording",
+            "Noise and unclear language",
+            "Active listening"
         ]
     },
 
+    // UNIT V - CONTROLLING
+
     // 31
     {
-        question: "Differential Piece Rate System was introduced by:",
+        question: "Controlling is the process of:",
         options: [
-            "Henry Fayol",
-            "F.W. Taylor",
-            "Elton Mayo",
-            "Peter Drucker"
+            "Designing products only",
+            "Recruiting employees only",
+            "Comparing actual performance with planned standards",
+            "Setting company ownership"
         ]
     },
 
     // 32
     {
-        question: "Taylor's approach emphasized:",
+        question: "What is usually the first step in the control process?",
         options: [
-            "Rule of thumb",
-            "Scientific methods",
-            "Informal communication",
-            "Employee ownership"
+            "Taking corrective action",
+            "Preparing the final report",
+            "Ignoring deviations",
+            "Establishing performance standards"
         ]
     },
 
     // 33
     {
-        question: "The Hawthorne Experiments are associated with:",
+        question: "After measuring actual performance, a manager should:",
         options: [
-            "F.W. Taylor",
-            "Elton Mayo",
-            "Henry Fayol",
-            "Max Weber"
+            "Compare it with established standards",
+            "Ignore the results",
+            "Stop collecting information",
+            "Remove all targets"
         ]
     },
 
     // 34
     {
-        question: "The Hawthorne studies highlighted the importance of:",
+        question: "A significant deviation from a standard may require:",
         options: [
-            "Machines only",
-            "Human and social factors",
-            "Capital only",
-            "Technology only"
+            "Removing all controls",
+            "Ignoring the deviation",
+            "Corrective action",
+            "Stopping all reporting"
         ]
     },
 
     // 35
     {
-        question: "The Human Relations approach emphasizes:",
+        question: "Budgetary control uses:",
         options: [
-            "Machines and methods",
-            "People and social relationships",
-            "Strict rules only",
-            "Financial accounting"
+            "Informal conversations only",
+            "Personality tests",
+            "Job rotation",
+            "Budgets to plan and control activities"
         ]
     },
 
     // 36
     {
-        question: "Max Weber is associated with the concept of:",
+        question: "Which is an example of budgetary control?",
         options: [
-            "Scientific Management",
-            "Bureaucracy",
-            "Human Relations",
-            "Systems Theory"
+            "Measuring employee friendships",
+            "Comparing actual expenses with the expense budget",
+            "Preparing a job description",
+            "Interviewing a leader"
         ]
     },
 
     // 37
     {
-        question: "A formal organization is characterized by:",
+        question: "Non-budgetary control techniques may include:",
         options: [
-            "Personal friendships only",
-            "Deliberately established relationships",
-            "No rules",
-            "No authority"
+            "Statistical reports and performance audits",
+            "Sales budgets only",
+            "Capital budgets only",
+            "Cash budgets only"
         ]
     },
 
     // 38
     {
-        question: "An informal organization develops mainly through:",
+        question: "Break-even analysis identifies the point where:",
         options: [
-            "Official rules",
-            "Social interactions",
-            "Government orders",
-            "Written procedures"
+            "Total revenue equals total cost",
+            "Fixed costs become zero",
+            "Sales are always zero",
+            "Profit is always highest"
         ]
     },
 
     // 39
     {
-        question: "Authority means:",
+        question: "Standard costing compares:",
         options: [
-            "Obligation to perform a task",
-            "Right to give orders and make decisions",
-            "Personal friendship",
-            "Informal communication"
+            "Assets with office locations only",
+            "Products with staff names",
+            "Employee ages with job titles",
+            "Actual costs with standard costs"
         ]
     },
 
     // 40
     {
-        question: "Responsibility means:",
+        question: "Management by exception means managers focus on:",
         options: [
-            "Right to punish",
-            "Obligation to perform assigned duties",
-            "Right to delegate",
-            "Power to control finances"
+            "Significant deviations from standards",
+            "Every minor detail equally",
+            "Only successful results",
+            "Tasks without standards"
         ]
     },
 
     // 41
     {
-        question: "Accountability refers to:",
+        question: "Preventive control is designed to:",
         options: [
-            "Being answerable for results",
-            "Delegating authority",
-            "Giving orders",
-            "Recruiting employees"
+            "Ignore possible risks",
+            "Reduce the chance of problems before they occur",
+            "Report results only at year-end",
+            "Correct errors only after completion"
         ]
     },
 
     // 42
     {
-        question: "Delegation means:",
+        question: "Direct control generally involves:",
         options: [
-            "Giving up all authority permanently",
-            "Assigning authority and responsibility to subordinates",
-            "Removing employees",
-            "Centralizing all decisions"
+            "Removing all supervision",
+            "Only long-term forecasts",
+            "Only automated reports",
+            "Direct supervision and correction of work"
         ]
     },
 
     // 43
     {
-        question: "Centralization means:",
+        question: "Which is an example of preventive control?",
         options: [
-            "Decision-making concentrated at higher levels",
-            "All employees make decisions",
-            "No authority exists",
-            "Authority is completely delegated"
+            "Ignoring safety procedures",
+            "Writing a year-end report only",
+            "Investigating a defect after delivery only",
+            "Training staff and checking procedures before work begins"
         ]
     },
 
     // 44
     {
-        question: "Decentralization means:",
+        question: "Computers support management control by:",
         options: [
-            "Concentration of authority",
-            "Dispersal of decision-making authority",
-            "Removal of management",
-            "Reduction of employees"
+            "Removing the need for managers",
+            "Processing data and producing timely reports",
+            "Eliminating all standards",
+            "Guaranteeing that errors never occur"
         ]
     },
 
     // 45
     {
-        question: "Span of Control refers to:",
+        question: "A Management Information System (MIS) provides:",
         options: [
-            "Number of departments",
-            "Number of subordinates directly supervised by a manager",
-            "Number of working hours",
-            "Number of products"
+            "Only personal messages",
+            "No business data",
+            "Relevant information for management decisions and control",
+            "Only entertainment content"
         ]
     },
 
     // 46
     {
-        question: "Motivation is the process of:",
+        question: "Productivity is commonly measured as:",
         options: [
-            "Forcing employees to work",
-            "Stimulating people to achieve goals",
-            "Reducing salaries",
-            "Increasing working hours"
+            "Output divided by input",
+            "Sales minus employee count",
+            "Input divided by profit",
+            "Costs plus working hours"
         ]
     },
 
     // 47
     {
-        question: "Maslow's Hierarchy of Needs contains:",
+        question: "Which may cause a productivity problem?",
         options: [
-            "3 levels",
-            "4 levels",
-            "5 levels",
-            "6 levels"
+            "Preventive maintenance",
+            "Poor training and equipment downtime",
+            "Effective communication",
+            "Clear goals and good tools"
         ]
     },
 
     // 48
     {
-        question: "According to Maslow, the lowest level of needs is:",
+        question: "Performance control compares actual results with:",
         options: [
-            "Social needs",
-            "Safety needs",
-            "Physiological needs",
-            "Esteem needs"
+            "Competitors' names only",
+            "Employee preferences only",
+            "Informal opinions alone",
+            "Predetermined objectives or standards"
         ]
     },
 
     // 49
     {
-        question: "Which of the following is a safety need?",
+        question: "An effective control system should be:",
         options: [
-            "Food",
-            "Job security",
-            "Friendship",
-            "Recognition"
+            "Timely, accurate and economical",
+            "Complex regardless of cost",
+            "Unrelated to organizational goals",
+            "Based on outdated data"
         ]
     },
 
     // 50
     {
-        question: "Need for friendship and belonging is classified as:",
+        question: "A management report should contain:",
         options: [
-            "Physiological need",
-            "Safety need",
-            "Social need",
-            "Self-actualization need"
+            "Unverified data only",
+            "Unrelated personal opinions",
+            "Relevant, accurate and understandable information",
+            "Every detail regardless of relevance"
         ]
     },
 
     // 51
     {
-        question: "Need for recognition, status and respect is called:",
+        question: "Exception reporting highlights:",
         options: [
-            "Social need",
-            "Esteem need",
-            "Safety need",
-            "Physiological need"
+            "Employee birthdays only",
+            "Every routine activity equally",
+            "Important deviations needing management attention",
+            "Advertisements only"
         ]
     },
 
     // 52
     {
-        question: "The highest level in Maslow's Hierarchy is:",
+        question: "A timely operational report helps managers to:",
         options: [
-            "Esteem",
-            "Social",
-            "Safety",
-            "Self-actualization"
+            "Track current operational performance",
+            "Avoid measuring results",
+            "Replace all planning",
+            "Remove organizational standards"
         ]
     },
 
     // 53
     {
-        question: "Leadership is primarily concerned with:",
+        question: "Control and planning are related because:",
         options: [
-            "Influencing people toward organizational goals",
-            "Preparing invoices",
-            "Maintaining machines",
-            "Reducing production"
+            "Plans cannot be measured",
+            "Control is unrelated to goals",
+            "Control checks whether plans and standards are achieved",
+            "Planning eliminates the need for control"
         ]
     },
 
     // 54
     {
-        question: "Which leadership style allows subordinates considerable freedom?",
+        question: "Which action demonstrates corrective control?",
         options: [
-            "Autocratic",
-            "Democratic",
-            "Laissez-faire",
-            "Bureaucratic"
+            "Setting a target before work begins",
+            "Training staff before a task",
+            "Writing a mission statement",
+            "Adjusting a process after identifying a performance gap"
         ]
     },
 
     // 55
     {
-        question: "Which leadership style involves centralized decision-making by the leader?",
+        question: "A limitation of computer-based control is that:",
         options: [
-            "Democratic",
-            "Laissez-faire",
-            "Autocratic",
-            "Participative"
+            "Data cannot be stored",
+            "Managers cannot access information",
+            "Reports are always perfectly accurate",
+            "Poor-quality input data can produce misleading reports"
         ]
     },
 
     // 56
     {
-        question: "Democratic leadership emphasizes:",
+        question: "A good reporting system should deliver information to:",
         options: [
-            "Employee participation",
-            "Complete leader control",
-            "No communication",
-            "No decision-making"
+            "No decision-maker",
+            "The right person at the right time",
+            "Only external customers",
+            "Everyone after it becomes outdated"
         ]
     },
 
     // 57
     {
-        question: "Communication is the process of:",
+        question: "Which control technique compares actual results with a budget?",
         options: [
-            "Only speaking",
-            "Exchange of information and understanding",
-            "Only writing",
-            "Giving orders only"
+            "Democratic leadership",
+            "Downward communication",
+            "Job enrichment",
+            "Budgetary control"
         ]
     },
 
     // 58
     {
-        question: "Which is an example of downward communication?",
+        question: "Which is an example of non-budgetary control?",
         options: [
-            "Employee to manager",
-            "Manager to employee",
-            "Employee to employee",
-            "Customer to employee"
+            "Performance audit",
+            "Production budget",
+            "Cash budget",
+            "Sales budget"
         ]
     },
 
     // 59
     {
-        question: "Which is an example of upward communication?",
+        question: "Why is feedback important in control?",
         options: [
-            "Manager to worker",
-            "Worker to manager",
-            "Manager to manager",
-            "Company to customer"
+            "It prevents all planning",
+            "It removes the need for standards",
+            "It helps identify gaps and improve performance",
+            "It replaces communication"
         ]
     },
 
     // 60
     {
-        question: "Which statement best describes effective management?",
+        question: "The main purpose of management reporting is to:",
         options: [
-            "Doing everything alone",
-            "Achieving organizational goals efficiently and effectively",
-            "Avoiding delegation",
-            "Using authority without responsibility"
+            "Increase paperwork without purpose",
+            "Avoid accountability",
+            "Hide deviations",
+            "Provide information for monitoring and decisions"
         ]
     }
 
 ];
-
 
 // ------------------------------------------------------
 // CHECK QUESTION COUNT
